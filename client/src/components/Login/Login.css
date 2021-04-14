@@ -1,0 +1,72 @@
+.container-login{
+    width: 400px;
+    height: 600px;
+    margin: 100px auto;
+    border:2px solid black;
+    font-family: sans-serif;
+    text-align: center;
+}
+.container h1{
+    text-transform: uppercase;
+    margin-top:70px;
+
+}
+.text{
+    margin-top:80px;
+    font-size: 25px;
+    border:none;
+    border-bottom: 2px solid greenyellow;
+    outline: none;
+
+}
+.pass{
+    margin-top:50px;
+    font-size: 25px;
+    border:none;
+    border-bottom: 2px solid greenyellow;
+    outline: none;
+    
+}
+.btn{
+    font-size:22px;
+    margin-top:25px;
+    width:60%;
+    padding:6px;
+    border:none;
+    background-color: white;
+    background-color: lightblue;
+    outline: none;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-top:80px;
+}
+.btn:hover{
+    font-size:25px;
+    width: 80%;
+    background-color:greenyellow;
+    outline: none;
+    color:black;
+   
+}
+.container-login i.icon{
+    font-size: 100px;
+
+}
+.container-login i.a{
+    font-size: 25px; 
+    margin-right: 10px;
+
+}
+
+.container-login a{
+    text-decoration: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-size:16px;
+
+}
+.container-login a:hover{
+    font-family: sans-serif;
+    font-size:18px;
+}

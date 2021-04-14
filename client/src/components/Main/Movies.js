@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import style from './Movies.module.css';
 import * as moviesService from '../../services/moviesService';
 
-const Movies = (props) => {
+const MoviesPage = (props) => {
 
    const [movies, setMovies] = useState([]);
 
@@ -21,6 +21,7 @@ const Movies = (props) => {
 
 
    return (
+   
       <div className={style.container}>
          {movies.map(movie => {
             return (
@@ -36,4 +37,4 @@ const Movies = (props) => {
 }
 
 
-export default Movies;
+export default MoviesPage;

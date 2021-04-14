@@ -1,0 +1,58 @@
+.container-register{
+    border:2px solid black;
+    text-align: center;
+    margin: 70px auto;
+    width:400px;
+    height:700px;
+    font-family: sans-serif;
+    
+}
+.container-register input{
+    font-size:25px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border:none;
+    border-bottom:2px solid greenyellow;
+    outline: none;
+
+}
+h1{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.container-register i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.container-register button{
+    width: 60%;
+    font-size:22px;
+    padding: 6px;
+    margin-bottom: 30px;
+    border:none;
+    text-transform: uppercase;
+    background-color: lightblue;
+    color:white;
+}
+.container-register button:hover{
+    background-color: greenyellow;
+    outline:none;
+    width: 80%;
+    color:black;
+    transition:0.5s;
+    cursor: pointer;
+}
+.container-register i.user{
+    font-size:100px;
+
+    margin-top:8px;
+}
+.container-register p{
+    font-size:18px;
+}
+.container-register a{
+    text-decoration: none;
+}
+.container-register a:hover{
+    font-size: 20px;
+}
