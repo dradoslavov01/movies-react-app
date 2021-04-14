@@ -1,0 +1,46 @@
+.topnav ul{
+    list-style-type: none;
+    background-color: rgb(34, 36, 37);
+    overflow: hidden;
+  
+  }
+  
+.topnav li{
+    float: left;
+    padding: 18px 23px;
+  }
+
+  .topnav li:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: #09ABBA;
+  }
+  
+  .topnav li.right {
+    float: right;
+    padding: 18px 23px;
+  }
+  
+.topnav li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+  }
+
+
+  /* .topnav .homeLink {
+    color:#f8002f;
+    font-size: 25px;
+    font-weight: bolder;
+  } */
+
+  
+  @media screen and (max-width: 600px) {
+    .topnav ul li.right, 
+    .topnav ul li {
+      float: none;
+      text-align: center;
+    }
+  
+  }
