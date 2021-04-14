@@ -5,13 +5,12 @@ const Navigation = () => {
    return (
       <nav className={style.topnav}>
          <ul>
-            <li><NavLink to="/" className={style.moviesLink}>Home</NavLink></li>
-            <li><NavLink to="/category/action" className={style.moviesLink}>Action</NavLink></li>
-            <li><NavLink to="/category/horror" className={style.moviesLink}>Horror</NavLink></li>
-            <li><NavLink to="/category/comedy" className={style.moviesLink}>Comedy</NavLink></li>
-            <li><NavLink to="/category/thriller" className={style.moviesLink}>Тhriller</NavLink></li>
-
-            <li className={style.right}><NavLink to="/login">Sign In</NavLink></li>
+            <NavLink to="/" className={style.moviesLink}><li>Home</li></NavLink>
+            <NavLink to="/category/action" className={style.moviesLink}><li>Action</li></NavLink>
+            <NavLink to="/category/horror" className={style.moviesLink}><li>Horror</li></NavLink>
+            <NavLink to="/category/comedy" className={style.moviesLink}><li>Comedy</li></NavLink>
+            <NavLink to="/category/fiction" className={style.moviesLink}><li>Fiction</li></NavLink>
+            <NavLink to="/login" className={style.right}><li>Sign In</li></NavLink>
          </ul>
       </nav>
    );

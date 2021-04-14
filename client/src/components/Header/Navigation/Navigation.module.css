@@ -5,23 +5,23 @@
   
   }
   
-.topnav li{
+.topnav a{
     float: left;
     padding: 18px 23px;
   }
 
-  .topnav li:hover{
+  .topnav a:hover{
     transition: 0.3s;
     cursor: pointer;
     background-color: #09ABBA;
   }
   
-  .topnav li.right {
+  .topnav .right {
     float: right;
     padding: 18px 23px;
   }
   
-.topnav li a {
+.topnav a li {
     display: inline-block;
     text-decoration: none;
     font-size: 20px;

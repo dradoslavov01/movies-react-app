@@ -2,15 +2,23 @@ import { useState, useEffect } from 'react';
 import style from './Movies.module.css';
 import * as moviesService from '../../services/moviesService';
 
-const Movies = () => {
+const Movies = (props) => {
 
    const [movies, setMovies] = useState([]);
+
+   const category = props.match.params.category;
 
    useEffect(() => {
       moviesService.getMovies()
          .then(data => setMovies(data))
-
    }, []);
+
+   useEffect(() => {
+      moviesService.getMovies(category)
+         .then(data => setMovies(data))
+
+   }, [category]);
+
 
    return (
       <div className={style.container}>
