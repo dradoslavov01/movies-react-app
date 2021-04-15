@@ -1,0 +1,62 @@
+.createForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 100px auto;
+}
+
+.createForm input {
+    outline: none;
+    font-size: 17px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 30px;
+    border:1px solid #646969;;
+    border-radius: 7px;
+    text-align: center;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+}
+
+.createForm input:focus {
+   transform: scale(1.2);
+   transition: 0.3s;
+   border:2px solid #09ABBA;;
+}
+
+.createForm textarea {
+    outline: none;
+    font-size: 17px;
+    margin-bottom: 15px;
+    border:1px solid #646969;
+    border-radius: 10px;
+    padding: 5px;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+}
+
+.createForm textarea:focus {
+    transform: scale(1.1);
+    transition: 0.3s;
+    border:2px solid #09ABBA;;
+}
+
+.createForm label {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.createForm button {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    background-color: #09ABBA;
+    margin-top: 5px;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+}
+.createForm button:hover {
+   cursor: pointer;
+   transform: scale(1.1);
+   transition: 0.2s;
+}

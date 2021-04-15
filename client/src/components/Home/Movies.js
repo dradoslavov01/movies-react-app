@@ -2,16 +2,15 @@ import { useState, useEffect } from 'react';
 import style from './Movies.module.css';
 import * as moviesService from '../../services/moviesService';
 
-const MoviesPage = (props) => {
+
+const HomePage = ({
+   match,
+   history
+}) => {
 
    const [movies, setMovies] = useState([]);
 
-   const category = props.match.params.category;
-
-   useEffect(() => {
-      moviesService.getMovies()
-         .then(data => setMovies(data))
-   }, []);
+   const category = match.params.category;
 
    useEffect(() => {
       moviesService.getMovies(category)
@@ -19,13 +18,11 @@ const MoviesPage = (props) => {
 
    }, [category]);
 
-
    return (
-   
       <div className={style.container}>
          {movies.map(movie => {
             return (
-               <section key={movie.id} className={style.moviesSection}>
+               <section onClick={() => history.push(`/movie/details/${movie.id}`)} key={movie.id} className={style.moviesSection}>
                   <img src={movie.img} alt="movie-img" />
                   <p>{movie.title}</p>
                   <p>{movie.year}</p>
@@ -37,4 +34,4 @@ const MoviesPage = (props) => {
 }
 
 
-export default MoviesPage;
+export default HomePage;

@@ -1,0 +1,81 @@
+.movieContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.movieContainer img {
+    width: 400px;
+    height: 500px;
+    margin-top: 140px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.movieContainer img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.movieDetails {
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 120px;
+    margin-right: 50px;
+}
+
+.movieDetails h2{
+   padding-bottom: 20px;
+}
+
+.movieDetails p{
+   padding-bottom: 20px;
+   font-size: 20px;
+}
+
+.movieDetails p span{
+  font-weight: bolder;
+}
+
+.deleteBtn {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+.deleteBtn:hover {
+    background-color: #bb0518;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.editBtn {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.editBtn:hover {
+    background-color: #d8a707;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.deleteBtn, .editBtn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 1.2rem;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    text-decoration: none;
+    margin-right: 10px;
+}
