@@ -1,14 +1,14 @@
 .container-register{
     border:2px solid black;
     text-align: center;
-    margin: 70px auto;
+    margin: 100px auto;
     width:400px;
-    height:700px;
+    height:600px;
     font-family: sans-serif;
     
 }
 .container-register input{
-    font-size:25px;
+    font-size:22px;
     margin-top: 15px;
     margin-bottom: 50px;
     border:none;
@@ -52,7 +52,4 @@ h1{
 }
 .container-register a{
     text-decoration: none;
-}
-.container-register a:hover{
-    font-size: 20px;
 }

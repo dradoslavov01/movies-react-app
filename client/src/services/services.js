@@ -15,7 +15,7 @@ export const getMovieById = (id) => {
 
 
 export const createMovie = (title, year, category, img, description) => {
-   let data = {
+   const data = {
       title,
       year,
       category,

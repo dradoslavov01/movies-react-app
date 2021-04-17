@@ -1,29 +1,41 @@
+import { Link } from 'react-router-dom';
+import { auth } from '../../utils/firebase'
 import './Register.css';
 
-const RegisterPage = () => {
+
+
+const RegisterPage = ({
+    history
+}) => {
+
+    const onRegisterSubmitHandler = (e) => {
+        e.preventDefault();
+
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                history.push('/')
+            })
+    }
+
     return (
         <div className="container-register">
             <i className="fa fa-user-circle user" aria-hidden="true"></i>
             <h1>Register</h1>
-            <form>
-                <i className="fa fa-user" aria-hidden="true"></i>
-                <input
-                    type="text"
-                    name="text"
-                    placeholder="Username"
-                    autocomplete="off"
-                /><br />
+            <form onSubmit={onRegisterSubmitHandler}>
                 <i className="fa fa-envelope" aria-hidden="true"></i>
                 <input
                     type="text"
-                    name="text"
+                    name="email"
                     placeholder="E-mail"
                     autocomplete="off"
                 /><br />
                 <i className="fa fa-lock" aria-hidden="true"></i>
                 <input
                     type="password"
-                    name="pass"
+                    name="password"
                     placeholder="Password"
                     autocomplete="off"
                 /><br />
@@ -36,7 +48,7 @@ const RegisterPage = () => {
                 /><br />
                 <button type="submit" name="btn">Register</button>
             </form>
-            <p>Have already account? <a href="/login">Login</a> here.</p>
+            <p>Have already account? <Link to="/login">Login</Link> here.</p>
         </div>
     );
 }

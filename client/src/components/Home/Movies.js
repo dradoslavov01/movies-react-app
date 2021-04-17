@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import style from './Movies.module.css';
-import * as moviesService from '../../services/moviesService';
+import { getMovies } from '../../services/services';
 
 
 const HomePage = ({
@@ -13,7 +13,7 @@ const HomePage = ({
    const category = match.params.category;
 
    useEffect(() => {
-      moviesService.getMovies(category)
+      getMovies(category)
          .then(data => setMovies(data))
 
    }, [category]);

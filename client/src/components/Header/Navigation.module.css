@@ -8,9 +8,11 @@
 .topnav li{
     float: left;
     padding: 18px 23px;
+    font-size: 20px;
+    color: #fff;
   }
 
-  .topnav li:hover{
+  .topnav li:hover:not(:nth-child(7)){
     transition: 0.3s;
     cursor: pointer;
     background-color: #09ABBA;
@@ -18,7 +20,7 @@
   
   .topnav li.right {
     float: right;
-    padding: 18px 23px;
+    padding: 18px 20px;
   }
   
 .topnav li a{

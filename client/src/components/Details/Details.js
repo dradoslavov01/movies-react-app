@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { getMovieById } from '../../services/moviesService';
+import { getMovieById } from '../../services/services';
 import style from './Details.module.css';
 
 

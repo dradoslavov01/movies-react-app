@@ -1,5 +1,5 @@
 import style from './Create.module.css';
-import { createMovie } from '../../services/moviesService'
+import { createMovie } from '../../services/services'
 
 
 const CreatePage = ({
@@ -10,9 +10,9 @@ const CreatePage = ({
       e.preventDefault();
       const { title, year, category, img, description } = e.target;
 
-      createMovie(title.value, year.value, category.value, img.value, description.value);
+      createMovie(title.value, year.value, category.value, img.value, description.value)
       
-      history.push('/')
+      history.push('/');
          
    };
 
