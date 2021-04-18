@@ -2,7 +2,6 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyCBHRzoAiglQM3xTvkgvdnfH373SIKK-u0",
     authDomain: "movies-react-app-e1278.firebaseapp.com",

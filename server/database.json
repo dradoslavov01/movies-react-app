@@ -4,6 +4,7 @@
       "id": 1,
       "title": "Home Alone",
       "year": "2016",
+      "ownerId": "R0E9Zw6mTEcgMquZCK8saJgw96L2",
       "category": "comedy",
       "img": "https://images-na.ssl-images-amazon.com/images/I/91tXzecvy-L._SL1500_.jpg",
       "description": "Home Alone is an extremely successful and beloved family comedy about a little boy named Kevin (Macaulay Culkin), who is accidentally forgotten when his family goes on holiday to France during the holiday season. After realizing that he has been left 'alone at home', he learns to take care of himself and eventually has to defend his house from two clumsy thieves (Joe Pesci, Daniel Stern) who plan to rob every house in the suburban neighborhood of Chicago.\nDirector: Chris Columbus\nStarring: Daniel Stern, Macaulay Culkin, John Candy, Joe Pesci, John Hurd and others.\nCountry: USA"
@@ -35,6 +36,7 @@
     {
       "id": 5,
       "title": "Born a Champion",
+      "ownerId": "R0E9Zw6mTEcgMquZCK8saJgw96L2",
       "year": "2021",
       "category": "action",
       "img": "https://i.ytimg.com/vi/CqXcwOHVUBI/maxresdefault.jpg",
@@ -74,6 +76,7 @@
     },
     {
       "id": 10,
+      "ownerId": "R0E9Zw6mTEcgMquZCK8saJgw96L2",
       "title": "Haunt",
       "year": "2019",
       "category": "horror",

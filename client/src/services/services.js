@@ -14,13 +14,14 @@ export const getMovieById = (id) => {
 };
 
 
-export const createMovie = (title, year, category, img, description) => {
+export const createMovie = (title, year, category, img, description, ownerId) => {
    const data = {
       title,
       year,
       category,
       img,
-      description
+      description,
+      ownerId
    }
 
    fetch(`${url}/movies`, {
@@ -31,3 +32,9 @@ export const createMovie = (title, year, category, img, description) => {
       body: JSON.stringify(data)
    })
 };
+
+export const deleteMovie = (id) => {
+   return fetch(`${url}/movies/${id}`, {
+      method: 'DELETE'
+   })
+}

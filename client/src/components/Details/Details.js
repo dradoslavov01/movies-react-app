@@ -1,19 +1,36 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { getMovieById } from '../../services/services';
+import { AuthContext } from '../../App'
+import { getMovieById, deleteMovie } from '../../services/services';
 import style from './Details.module.css';
 
 
-const DetailsPage = ({ match }) => {
+const DetailsPage = ({ match, history }) => {
 
    const [movie, setMovie] = useState([]);
+
+   const loggedInUser = useContext(AuthContext);
+   let userId = null;
+   if (loggedInUser != null) {
+      userId = loggedInUser.uid;
+   }
 
    const id = match.params.id;
 
    useEffect(() => {
       getMovieById(id)
          .then(data => setMovie(data));
-   }, [id])
+   }, [id]);
+
+
+   const onClickDeleteMovieHandler = () => {
+      if(window.confirm('Are you sure you want to delete this movie?')) {
+         deleteMovie(id)
+            .then(() => {
+               history.push('/')
+            })
+      }
+   }
 
    return (
       <div className={style.movieContainer}>
@@ -32,8 +49,13 @@ const DetailsPage = ({ match }) => {
             <p className={style.movieDescription}>
                <span>Description: </span> {movie.description}
             </p>
-            <NavLink className={style.deleteBtn} to="/movie/delete">Delete</NavLink>
-            <NavLink className={style.editBtn} to="/movie/edit">Edit</NavLink>
+            {userId === movie.ownerId
+               ? <>
+                  <NavLink onClick={onClickDeleteMovieHandler} className={style.deleteBtn} to="#">Delete</NavLink>
+                  <NavLink className={style.editBtn} to="/movie/edit">Edit</NavLink>
+               </>
+               : ''
+            }
          </div>
       </div>
    );

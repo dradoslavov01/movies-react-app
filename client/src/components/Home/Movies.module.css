@@ -19,7 +19,7 @@
 .moviesSection:hover {
     cursor: pointer;
     transform: scale(1.1);
-    transition: 0.4s;
+    transition: 0.3s;
     box-shadow: none;
 }
 

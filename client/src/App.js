@@ -1,6 +1,6 @@
 import './App.css';
-import {Route, Redirect} from 'react-router-dom';
-import {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
 import Navigation from './components/Header/Navigation';
 import HomePage from './components/Home/Movies';
@@ -9,34 +9,37 @@ import CreatePage from './components/Create/Create';
 import LoginPage from './components/Login/Login';
 import RegisterPage from './components/Register/Register';
 
-import {auth} from './utils/firebase';
+import { auth } from './utils/firebase';
+
+export const AuthContext = React.createContext();
 
 function App() {
 
-  const [user, setUser] = useState(null);
+  const [loggedInUser, setloggedInUser] = useState(null);
 
   useEffect(() => {
-    auth.onAuthStateChanged(setUser);
-  }, [user])
+    auth.onAuthStateChanged(setloggedInUser);
+  }, [loggedInUser])
 
   return (
     <div className="App">
-      <Navigation isLoggedIn={user} />
+      <AuthContext.Provider value={loggedInUser}>
+        <Navigation />
 
-      <Route path="/" exact component={HomePage} />
-      <Route path="/category/:category" component={HomePage} />
-      <Route path="/movie/details/:id" component={DetailsPage} />
-      <Route path="/movie/create" component={CreatePage} />
-      <Route path="/login" component={LoginPage} />
-      <Route path="/register" component={RegisterPage} />
-      <Route path="/logout" render={() =>{
-        auth.signOut()
-        return <Redirect to='/' />
-      }} />
-
-
+        <Route path="/" exact component={HomePage} />
+        <Route path="/category/:category" component={HomePage} />
+        <Route path="/movie/details/:id" component={DetailsPage} />
+        <Route path="/movie/create" component={CreatePage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
+        <Route path="/logout" render={() => {
+          auth.signOut()
+          return <Redirect to='/' />
+        }} />
+      </AuthContext.Provider>
     </div>
   );
+
 }
 
 export default App;

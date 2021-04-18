@@ -1,19 +1,24 @@
+import { useContext } from 'react';
 import style from './Create.module.css';
 import { createMovie } from '../../services/services'
+import { AuthContext } from '../../App';
 
 
 const CreatePage = ({
    history
 }) => {
 
+   const loggedInUser = useContext(AuthContext);
+   const ownerId = loggedInUser.uid;
+
    const onCreateSubmitHanler = (e) => {
       e.preventDefault();
       const { title, year, category, img, description } = e.target;
 
-      createMovie(title.value, year.value, category.value, img.value, description.value)
-      
+      createMovie(title.value, year.value, category.value, img.value, description.value, ownerId)
+
       history.push('/');
-         
+
    };
 
    return (
