@@ -15,7 +15,7 @@ const RegisterPage = ({
         const password = e.target.password.value;
 
         auth.createUserWithEmailAndPassword(email, password)
-            .then((userCredential) => {
+            .then(() => {
                 history.push('/')
             })
     }

@@ -33,8 +33,29 @@ export const createMovie = (title, year, category, img, description, ownerId) =>
    })
 };
 
+export const editMovie = (id, title, year, category, img, description, ownerId) => {
+
+   const data = {
+      title,
+      year,
+      category,
+      img,
+      description,
+      ownerId
+   }
+
+
+   return fetch(`${url}/movies/${id}`, {
+      method: 'PUT',
+      headers: {
+         'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+   })
+}
+
 export const deleteMovie = (id) => {
    return fetch(`${url}/movies/${id}`, {
       method: 'DELETE'
-   })
+   });
 }

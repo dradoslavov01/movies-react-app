@@ -1,13 +1,13 @@
 {
   "movies": [
     {
-      "id": 1,
       "title": "Home Alone",
       "year": "2016",
-      "ownerId": "R0E9Zw6mTEcgMquZCK8saJgw96L2",
       "category": "comedy",
       "img": "https://images-na.ssl-images-amazon.com/images/I/91tXzecvy-L._SL1500_.jpg",
-      "description": "Home Alone is an extremely successful and beloved family comedy about a little boy named Kevin (Macaulay Culkin), who is accidentally forgotten when his family goes on holiday to France during the holiday season. After realizing that he has been left 'alone at home', he learns to take care of himself and eventually has to defend his house from two clumsy thieves (Joe Pesci, Daniel Stern) who plan to rob every house in the suburban neighborhood of Chicago.\nDirector: Chris Columbus\nStarring: Daniel Stern, Macaulay Culkin, John Candy, Joe Pesci, John Hurd and others.\nCountry: USA"
+      "description": "Home Alone is an extremely successful and beloved family comedy about a little boy named Kevin (Macaulay Culkin), who is accidentally forgotten when his family goes on holiday to France during the holiday season. Care of himself and eventually has to defend his house house in the suburban neighborhood of Chicago.\nDirector: Chris Columbus\nStarring: Daniel Stern, Macaulay Culkin, John Candy, Joe Pesci, John Hurd and others.\nCountry: USA",
+      "ownerId": "R0E9Zw6mTEcgMquZCK8saJgw96L2",
+      "id": 1
     },
     {
       "id": 2,
@@ -34,13 +34,13 @@
       "description": "The plot of the new 'Wrong Turn' tells the story of a group of friends who set out on a tour of the Appalachians. Everything is going according to plan until they come to the Foundation - a closed community hiding in the mountains for decades, which is not very friendly. We can guess what happens next.\nDirector: Mike Nelson\nStarring: Emma Dumont, Charlotte Vega, Damien Maffei, Daisy Head, Cheney Morrow, Adain Bradley, Tim De Zarn, Bill Sage, Dylan McTee, Matthew Modine\nCountry: USA, UK, Germany"
     },
     {
-      "id": 5,
       "title": "Born a Champion",
-      "ownerId": "R0E9Zw6mTEcgMquZCK8saJgw96L2",
       "year": "2021",
       "category": "action",
       "img": "https://i.ytimg.com/vi/CqXcwOHVUBI/maxresdefault.jpg",
-      "description": "A former Marine is preparing for a jiu jitsu rematch against an opponent who wins fraudulently during their first meeting.\nDirector: Alex Ranarivelle\nStarring: Sean Patrick Flannery, Katrina Bowden, Dennis Quaid, Hanzo Gracie, Renault Wilson, Maurice Compte, Costas Mandilor, Ali Afshar\n"
+      "description": "A former Marine is preparing for a jiu jitsu rematch against an opponent who wins fraudulently during their first meeting.\nDirector: Alex Ranarivelle\nStarring: Sean Patrick Flannery, Katrina Bowden, Dennis Quaid, Hanzo Gracie, Renault Wilson, Maurice Compte, Costas Mandilor, Ali Afshar\n",
+      "ownerId": "R0E9Zw6mTEcgMquZCK8saJgw96L2",
+      "id": 5
     },
     {
       "id": 6,

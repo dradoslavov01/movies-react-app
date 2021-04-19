@@ -32,6 +32,8 @@ const DetailsPage = ({ match, history }) => {
       }
    }
 
+   const path = `/movie/details/edit/${id}`
+
    return (
       <div className={style.movieContainer}>
          <img src={movie.img} alt="movie-img" />
@@ -52,7 +54,7 @@ const DetailsPage = ({ match, history }) => {
             {userId === movie.ownerId
                ? <>
                   <NavLink onClick={onClickDeleteMovieHandler} className={style.deleteBtn} to="#">Delete</NavLink>
-                  <NavLink className={style.editBtn} to="/movie/edit">Edit</NavLink>
+                  <NavLink className={style.editBtn} to={path}>Edit</NavLink>
                </>
                : ''
             }

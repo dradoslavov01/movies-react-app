@@ -13,7 +13,7 @@
   }
 
   .topnav li:hover:not(:nth-child(7)){
-    transition: 0.3s;
+    transition: all ease 0.2s;
     cursor: pointer;
     background-color: #09ABBA;
   }
@@ -44,5 +44,4 @@
       float: none;
       text-align: center;
     }
-  
   }
