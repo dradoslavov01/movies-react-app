@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
-import { NavLink } from 'react-router-dom';
-import { AuthContext } from '../../App'
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../App';
 import { getMovieById, deleteMovie } from '../../services/services';
 import style from './Details.module.css';
 
@@ -24,15 +24,15 @@ const DetailsPage = ({ match, history }) => {
 
 
    const onClickDeleteMovieHandler = () => {
-      if(window.confirm('Are you sure you want to delete this movie?')) {
+      if (window.confirm('Are you sure you want to delete this movie?')) {
          deleteMovie(id)
             .then(() => {
-               history.push('/')
+               history.push('/');
             })
       }
    }
 
-   const path = `/movie/details/edit/${id}`
+   const logoutPath = `/movie/details/edit/${id}`;
 
    return (
       <div className={style.movieContainer}>
@@ -51,10 +51,11 @@ const DetailsPage = ({ match, history }) => {
             <p className={style.movieDescription}>
                <span>Description: </span> {movie.description}
             </p>
+            <button className={style.likeBtn}>Like</button>
             {userId === movie.ownerId
                ? <>
-                  <NavLink onClick={onClickDeleteMovieHandler} className={style.deleteBtn} to="#">Delete</NavLink>
-                  <NavLink className={style.editBtn} to={path}>Edit</NavLink>
+                  <button onClick={onClickDeleteMovieHandler} className={style.deleteBtn} to="#">Delete</button>
+                  <Link className={style.editBtn} to={logoutPath}>Edit</Link>
                </>
                : ''
             }

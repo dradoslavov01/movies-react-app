@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import style from './Movies.module.css';
 import { getMovies } from '../../services/services';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 
 const HomePage = ({
@@ -23,6 +24,7 @@ const HomePage = ({
          {movies.map(movie => {
             return (
                <section onClick={() => history.push(`/movie/details/${movie.id}`)} key={movie.id} className={style.moviesSection}>
+                  <FavoriteIcon className={style.likeIcon} />
                   <img src={movie.img} alt="movie-img" />
                   <p>{movie.title}</p>
                   <p>{movie.year}</p>

@@ -28,9 +28,10 @@ const EditPage = ({
    
       editMovie(id, title.value, year.value, category.value, img.value, description.value, ownerId)
          .then(() => {
-            history.push(`/movie/details/${id}`)
-         })
-   }
+            history.push(`/movie/details/${id}`);
+            return;
+         });
+   };
 
    return (
       <form onSubmit={onEditSubmitHandler} className={style.createForm} autoComplete="off">
@@ -39,7 +40,7 @@ const EditPage = ({
          <label>Year</label>
          <input type="text" name="year" defaultValue={movieData.year} />
          <label>Category</label>
-         <input type="text" name="category" defaultValue={movieData.category}/>
+         <input type="text" name="category" defaultValue={movieData.category} />
          <label>Image</label>
          <input type="text" name="img" defaultValue={movieData.img} />
          <label>Description</label>
@@ -47,7 +48,7 @@ const EditPage = ({
          <button name="addBtn">Save Changes</button>
       </form>
    );
-}
+};
 
 
 export default EditPage;

@@ -45,26 +45,28 @@
     background-color: #dc3545;
     border-color: #dc3545;
     color: white;
+    transition: 0.4s;
 }
 .deleteBtn:hover {
     background-color: #bb0518;
     transform: scale(1.1);
-    transition: 0.4s;
+    cursor: pointer;
 }
 
 .editBtn {
     background-color: #ffc107;
     border-color: #ffc107;
     color: #212529;
+    transition: 0.4s;
 }
 
 .editBtn:hover {
     background-color: #d8a707;
     transform: scale(1.1);
-    transition: 0.4s;
+    cursor: pointer;
 }
 
-.deleteBtn, .editBtn {
+.deleteBtn, .editBtn, .likeBtn {
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -78,4 +80,17 @@
     line-height: 1.5;
     text-decoration: none;
     margin-right: 10px;
+}
+
+.likeBtn {
+    background-color: #0a6ee0;
+    border-color: #0a6ee0;
+    color: white;
+    transition: 0.4s;
+}
+
+.likeBtn:hover {
+    background-color: #0150ac;
+    transform: scale(1.1);
+    cursor: pointer;
 }

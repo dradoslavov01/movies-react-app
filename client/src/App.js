@@ -35,10 +35,6 @@ function App() {
         <Route path="/movie/create" component={CreatePage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
-        <Route path="/logout" render={() => {
-          auth.signOut()
-          return <Redirect to='/' />
-        }} />
       </AuthContext.Provider>
     </div>
   );
