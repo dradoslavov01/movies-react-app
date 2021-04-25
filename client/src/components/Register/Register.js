@@ -1,5 +1,6 @@
+import {useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { auth } from '../../utils/firebase'
+import { auth } from '../../utils/firebase';
 import './Register.css';
 
 
@@ -8,17 +9,17 @@ const RegisterPage = ({
     history
 }) => {
 
-    const onRegisterSubmitHandler = (e) => {
+    let onRegisterSubmitHandler = (e) => {
         e.preventDefault();
-
         const email = e.target.email.value;
         const password = e.target.password.value;
 
         auth.createUserWithEmailAndPassword(email, password)
             .then(() => {
                 history.push('/')
-            })
+            }).catch(err => alert(err))
     }
+
 
     return (
         <div className="container-register">
@@ -30,23 +31,23 @@ const RegisterPage = ({
                     type="text"
                     name="email"
                     placeholder="E-mail"
-                    autocomplete="off"
+                    autoComplete="off"
                 /><br />
                 <i className="fa fa-lock" aria-hidden="true"></i>
                 <input
                     type="password"
                     name="password"
                     placeholder="Password"
-                    autocomplete="off"
+                    autoComplete="off"
                 /><br />
                 <i className="fa fa-lock" aria-hidden="true"></i>
                 <input
                     type="password"
                     name="pass"
                     placeholder="Repeat password"
-                    autocomplete="off"
+                    autoComplete="off"
                 /><br />
-                <button type="submit" name="btn">Register</button>
+                <button name="btn">Register</button>
             </form>
             <p>Have already account? <Link to="/login">Login</Link> here.</p>
         </div>

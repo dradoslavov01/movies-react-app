@@ -4,6 +4,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 import Navigation from './components/Header/Navigation';
 import HomePage from './components/Home/Movies';
+import ProfilePage from './components/Profile/Profile'
 import DetailsPage from './components/Details/Details';
 import EditPage from './components/Edit/Edit';
 import CreatePage from './components/Create/Create';
@@ -16,11 +17,13 @@ export const AuthContext = React.createContext();
 
 function App() {
 
+
   const [loggedInUser, setloggedInUser] = useState(null);
 
   useEffect(() => {
-    auth.onAuthStateChanged(setloggedInUser);
+    auth.onAuthStateChanged(setloggedInUser)
   }, [loggedInUser]);
+
 
 
   return (
@@ -29,12 +32,19 @@ function App() {
         <Navigation />
 
         <Route path="/" exact component={HomePage} />
+        <Route path="/profile" component={ProfilePage} />
         <Route path="/category/:category" component={HomePage} />
         <Route path="/movie/details/:id" exact component={DetailsPage} />
         <Route path="/movie/details/edit/:id" exact component={EditPage} />
         <Route path="/movie/create" component={CreatePage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
+        <Route path="/logout" render={() => {
+          auth.signOut();
+          return <Redirect to="/" />
+        }}
+        />
+
       </AuthContext.Provider>
     </div>
   );

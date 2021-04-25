@@ -19,7 +19,7 @@ nav ul {
   padding: 18px 16px;
 }
 
-nav ul li a{
+nav ul .leftSide li a{
     display: inline-block;
     text-decoration: none;
     font-size: 21px;
@@ -32,25 +32,37 @@ nav ul li a{
 
 
 
-nav ul li a:hover{
+nav ul .leftSide li a:hover{
     transform: scale(1.1);
     cursor: pointer;
     background-color: rgb(7, 82, 133);
 }
 
-.rightSide li .icons{
+nav ul .rightSide li .icons{
   font-size: 50px;
   color:white;
   transition: 0.2s;
 }
 
-.rightSide li .icons:hover{
+nav ul .rightSide li .icons:hover{
   cursor: pointer;
   transform: scale(1.2);
 }
 
-.rightSide li a:nth-child(1){
+nav ul .rightSide :nth-child(1) a{
   background-color: rgb(218, 6, 6);
+   display: inline-block;
+    text-decoration: none;
+    font-size: 21px;
+    color: #fff;
+    padding: 0.3em 0.7em;
+    border-radius: 0.2em;
+    transition: all ease-in 0.2s;
+}
+
+
+nav ul .rightSide :nth-child(1) a:hover{
+  transform: scale(1.1);
 }
 
 @media (max-width: 950px) {
@@ -59,12 +71,12 @@ nav ul li a:hover{
         align-items: flex-start;
     }
 
-    .leftSide, .rightSide {
+    nav ul .leftSide, nav ul .rightSide {
       width: 100%;
       flex-direction: column;
     }
 
-    .leftSide li, .rightSide li {
+    nav ul .leftSide li, nav ul .rightSide li {
       text-align: center;
     }
 }

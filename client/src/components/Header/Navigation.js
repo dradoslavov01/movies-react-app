@@ -1,19 +1,13 @@
 import { useContext } from 'react';
 import { AuthContext } from '../../App';
-import { NavLink, Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import style from './Navigation.module.css';
-import { auth } from '../../utils/firebase'
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const Navigation = () => {
 
    const loggedInUser = useContext(AuthContext);
-
-   const onLogoutClickHandler = () => {
-      auth.signOut();
-      <Redirect to="/" />
-   }
 
    return (
       <nav>
@@ -29,8 +23,8 @@ const Navigation = () => {
                {loggedInUser
                   ? (<>
                      <li><NavLink to="/movie/create">Add Movie</NavLink></li>
-                     <li><AccountBoxIcon className={style.icons} /></li>
-                     <li><ExitToAppIcon onClick={onLogoutClickHandler} className={style.icons} /></li>
+                     <li><NavLink to="/profile"><span title="profile"><AccountBoxIcon className={style.icons} /></span></NavLink></li>
+                     <li><NavLink to="/logout"><span title="logout"><ExitToAppIcon className={style.icons} /></span></NavLink></li>
                   </>
                   )
                   : (<li className={style.right}><NavLink to="/login">Sign in</NavLink></li>)
